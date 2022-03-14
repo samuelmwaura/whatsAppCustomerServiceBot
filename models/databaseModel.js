@@ -26,8 +26,7 @@ const stageSchema = {
     },
     stage:{
         type:Sequelize.STRING(20),
-        allowNull:false,
-        unique:true
+        allowNull:false
     }
 }
 
@@ -50,7 +49,7 @@ const customer = sequelize.define('customer',customerSchema,{timestamps:true});
 const stage=sequelize.define('stage',stageSchema,{timestamps:true});
 const session = sequelize.define('session',sessionSchema,{timestamps:true});
 customer.hasOne(stage);
-customer.hasMany(session)
+customer.hasMany(session);
 
 module.exports={
     customer,

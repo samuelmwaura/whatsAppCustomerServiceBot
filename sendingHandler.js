@@ -1,4 +1,6 @@
 const dotenv= require('dotenv');
+dotenv.config();
+clickatellkey=process.env.clickatellkey;
 
 
 const options = {
@@ -6,7 +8,7 @@ const options = {
   method: "POST",
   headers: {
     'Content-type': 'application/json',
-    'Authorization':process.env.clickatellkey
+    'Authorization':clickatellkey
   }
 };
 
